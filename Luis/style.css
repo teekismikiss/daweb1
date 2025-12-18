@@ -1,0 +1,146 @@
+body {
+    max-width: 1100px;
+    background-color: #0a8cc3;
+    margin: auto;
+
+}
+
+ul.red {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+ul.red li {
+    color: #ff0004;
+    font-family: sans-serif;
+    text-decoration: underline;
+}
+
+section.top {
+    display: flex;
+}
+
+
+section.top p {
+    color: #2d15ba;
+}
+
+div.topizq {
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.topdcha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1; 
+    gap: 50px;
+}
+
+
+.fotob {
+    width: 200px
+;}
+
+
+
+
+ul.red {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+ul.red li {
+    color: #ff0004;
+    font-family: sans-serif;
+    text-decoration: underline;
+}
+
+section.top {
+    display: flex;
+    gap: 50px;
+
+}
+
+
+section.top p {
+    color: #2d15ba;
+}
+
+div.topizq {
+    max-width: 350px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+div.bajdcha .fotob {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+    align-items: flex-start
+}
+
+.fotob {
+    width: 250px;height:auto;transform:rotate(5deg);
+    
+}
+
+.fotoa {
+    max-width: 400px;max-width: 300px;
+    height: auto;
+    align-self: flex-end; /* Esto la manda a la derecha del todo */ transform:rotate(-3deg);
+
+}
+
+.bas {
+    max-width: 100%;
+    margin: auto;margin-bottom: 50px;
+}
+
+.bajo {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 20px
+}
+
+.bajo img {
+    width: 270px;
+    height: auto;
+    margin-left: 50px;
+    gap: px
+}
+
+.foto1 {
+    transform: rotate(-3deg);
+}
+
+.foto2 {
+    transform: rotate(8deg);
+}
+
+.foto3 {
+    transform: rotate(-8deg);
+}
+
+ul.foot {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #2d15ba;
+    font-family: sans-serif;
+}
+.pie{
+    margin-top: 50px;
+    padding: 20px;
+}
