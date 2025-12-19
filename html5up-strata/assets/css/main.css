@@ -135,7 +135,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #787878;
+		color: #c50707;
 		font-weight: 400;
 		line-height: 1em;
 		margin: 0 0 1em 0;
@@ -2220,6 +2220,7 @@ input, select, textarea {
 			margin: 1.5em 0 0 0;
 			padding-left: 2.25em;
 			position: relative;
+			color:#0a40b4
 		}
 
 			ul.labeled-icons li:first-child {
@@ -2445,8 +2446,8 @@ input, select, textarea {
 		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		background-color: transparent;
 		border-radius: 0.35em;
-		border: solid 3px #efefef;
-		color: #787878 !important;
+		border: solid 3px #c50707;
+		color: #c50707 !important;
 		cursor: pointer;
 		display: inline-block;
 		font-weight: 400;
@@ -2464,8 +2465,8 @@ input, select, textarea {
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #0a40b4;
+			color: #0a40b4 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2593,7 +2594,8 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background: #e01d1d;
+background: radial-gradient(circle, rgba(224, 29, 29, 1) 0%, rgba(196, 20, 20, 1) 67%, rgba(140, 15, 15, 1) 100%);
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -2621,6 +2623,8 @@ input, select, textarea {
 			-ms-flex-grow: 1;
 			flex-grow: 1;
 			margin: 0 0 2em 0;
+			
+
 		}
 
 		#header strong, #header b {
@@ -3033,6 +3037,7 @@ input, select, textarea {
 			}
 
 	}
+	p.rouge{color:red;}
 
 /* Medium */
 
@@ -3078,7 +3083,8 @@ input, select, textarea {
 			#footer {
 				background-attachment: scroll;
 				background-color: #1f1815;
-				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+				background: #061e4f;
+background: radial-gradient(circle, rgba(6, 30, 79, 1) 6%, rgba(21, 80, 207, 1) 48%, rgba(10, 64, 180, 1) 100%);
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
 				background-size: auto,							cover;
