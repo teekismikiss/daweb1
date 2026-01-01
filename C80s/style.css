@@ -5,6 +5,7 @@
   --c1: #fea6ff;
   --c2: #ffffff;
   --c3: #000000;
+  --neon:#FEBFFC;
 }
 .navbar {
   list-style: none;
@@ -115,7 +116,7 @@ li.MJ,
 .EU {
   display: inline-block;
   padding: 10px;
-  border-radius: 10px;
+  border-radius:10px;
   text-align: center;
   max-width 250px;
   border: 1px solid var(--c1);
@@ -140,7 +141,7 @@ UL.CANCIONES LI {
 .canciones li:hover {
   background-color: var(--c2);
   color: var(--c1)  ;
-  scale: 1.2;
+  scale: 1.08;
   z-index: 2;
 }
 .gallery img{
@@ -152,4 +153,38 @@ UL.CANCIONES LI {
 ul.menupie {
   list-style: none;display:inline-flex;gap:20px;justify-content:center;align-self: center;
   text-align: center;
+}
+/* Contenedor de la Galería */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  width: 65%;           /* Lo que me pediste */
+  margin: 50px auto;    /* Centrado y con aire arriba/abajo */
+  padding: 20px;
+  border: 2px solid var(--c1);
+  border-radius: 15px;
+}
+
+/* para las fotos con efecto Neon Pulse */
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 2;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.gallery img:hover {
+  border-color: var(--neon);
+  transform: scale(1.05);
+  /* transicion en la imagen */
+  animation: neon-simple-pulse 1.5s infinite;
+}
+
+@keyframes neon-simple-pulse {
+  0% { box-shadow: 0 0 25px var(--neon); }
+  50% { box-shadow: 0 0 25px var(--neon); }
+  100% { box-shadow: 0 0 25px var(--neon); }
 }
