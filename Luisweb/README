@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="eS">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spain 80</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!DOCTYPE html>
+    <html lang="eS">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spain 80</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+
+        </section>
+
+        <header>
+            <nav>
+                <ul class="red">
+                    <li>Inicio</li>
+                    <li>Introducción</li>
+                    <li>Trivial</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="uno">
+                <div class="unoa">
+                    <img src="https://happyfm.es/wp-content/uploads/2021/02/la-chica-de-ayer-de-nacha-pop-letra-historia-y-video-01.jpg"
+                        alt="">
+                    <a href="https://www.youtube.com/watch?v=2pRmTJjBr6c&list=RD2pRmTJjBr6c&start_radio=1">La chica de
+                        ayer</a>
+                    <img src="https://yofuiaegb.com/wp-content/uploads/2013/10/Hombres-G.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=8gLUhCTvZco&list=RD8gLUhCTvZco&start_radio=1">Voy a
+                        pasarmelo bien</a>
+                </div>
+                <div class="unob">El fenomeno más iconico de la epoca fue la "Movida Madrileña", un movimiento
+                    contracultural y efervescente que surgió en Madrid y se extendió por todo el país.</div>
+                <div class="unoc">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273d304423e3b5901d59e266b2d" alt="">
+                    <a
+                        href="https://www.youtube.com/watch?v=hJC4RI6xIdY&list=RDhJC4RI6xIdY&start_radio=1&pp=ygUjbG9zIG5pa2lzIGVsIGltcGVyaW8gY29udHJhYXRhY2EgaGSgBwE%3D">El
+                        imperio contraataca</a>
+                    <img src="https://ep01.epimg.net/especiales/2016/mecano/images/looks/naturalidad.jpg" alt="">
+                    <a href="https://www.youtube.com/watch?v=bhPsg2lRr5Y&list=RDbhPsg2lRr5Y&start_radio=1">Barco a
+                        Venus</a>
+                </div>
+        </main>
+    </body>
+    <footer>
+        <section class="pie">
+            <ul class="foot">
+                <li>&copy Spain 80</li>
+                <li>Politica de cookies</li>
+            </ul>
+        </section>
+    </footer>
+
+    </html>
