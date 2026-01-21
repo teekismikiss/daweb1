@@ -4,4 +4,4 @@ Ennlaces y ejercicios hechos en Codepen y Figma
 
 * prototipo : https://www.figma.com/design/Es57tT0xJ2Cmc3yQyQKzrA/Cafe?node-id=0-1&t=9kUxReiI0RtLN1MI-1
 
-# proyecto web de los 80s: https://teekismikiss.github.io/daweb1/
+# proyecto web de los 80s (work in progress): https://teekismikiss.github.io/daweb1/
