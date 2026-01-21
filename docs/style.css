@@ -1,0 +1,44 @@
+*{ouline:1px solid red;}
+
+.navbar{list-style:none;display:flex;justify-content:center; gap:20px;font-family:monospace;size:14px;border-bottom: 1px solid #fea6ff;margin-top:30px;}
+.navbar li a{ text-decoration:none; color:black;}
+.navbar li a:hover{ color:#fea6ff;}
+
+img.fototop{ 
+  width: 500px;
+  height: auto;
+  border-radius: 10px;
+  display:block;
+  justify-content:center;
+  margin:auto;
+}
+
+h1,h2{font-family: monospace;}
+h1{margin-top:30 px; display:flex;justify-content:center;}
+h2{margin-top: 20px;}
+
+main{max-width:100%; justify-content:center;background:white; padding:20px;margin:auto;}
+
+.S2{ border-bottom: 1px solid #fea6ff;border-top:1px solid #fea6ff ;}
+ul.canciones{list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  padding-left: 0;
+}
+ul.canciones img{ width: 200px;height:auto;border-radius:10px; display:block; margin:auto;}
+ul.canciones h3{ font-family: monospace; text-align:center;font-size:14;}
+ul.canciones .bouton{background-color: #fea6ff ;color: white;border:none; border-radius:10px;padding:5px;} 
+
+li.MJ,.RUN,.QUIN,.EU{display:inline-block ; padding:10px; border-radius:10px;text-align:center; max-width 250px;border:1px solid #fea6ff}
+
+UL.CANCIONES LI{display:flex;flex-direction:row; flex-wrap:nowrap;justify-content:center;align-items:flex-start; }
+
+
+footer{margin-top:20px;}
+.genero,.singer{margin-bottom:10px;border-radius:20px;}
+.canciones li:hover{
+	background-color: white;
+	color: #fea6ff;
+	scale: 1.2;
+	z-index: 2;
