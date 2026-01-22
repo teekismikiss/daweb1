@@ -1,0 +1,181 @@
+* {
+
+  box-sizing: border-box;
+  font-family: sans-serif
+}
+
+header h1,
+header h2,
+header h3,
+header p,
+header ul,
+header li {
+  margin: 0;
+}
+
+/*para quitar el espacio enre a lineas margin:0 */
+
+:root {
+  --c1: black;
+  --c2: #49007e;
+  /*purple*/
+  --c3: #ffff00;
+  /*pink*/
+  --c4: #ff7d10;
+  /*orange*/
+  --c5: white;
+}
+
+body {
+  max-width: 900px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 20px;
+  margin-top: 10vh
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/* header & nav*/
+.avatar {
+  display: grid;
+  place-items: center;
+}
+
+.card,
+.flex {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.iconos {
+  display: inline-block;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.avatar li {
+  display: block;
+}
+
+img.photo {
+  margin-top: 10vh;
+  border: 1.5px solid black;
+  box-shadow: 5px 1.90px;
+  border-radius: 2.75px;
+  margin-bottom: 10px;
+}
+
+avatar p {
+  font-size: 18px;
+}
+
+.btnnav {
+  border: none;
+  background: var(--c1);
+  color: var(--c5);
+  border-radius: 10px 10px 0px 0px;
+  margin-right: 0;
+  padding: 3px 20px;
+}
+
+#btnhtml:hover,
+#btnhtml.activo {
+  background: var(--c4);
+  border: var(--c4);
+}
+
+
+#btnjs:hover,
+#btnjs.activo {
+  background: var(--c3);
+  border: var(--c3);
+  color: var(--c1);
+  font-weight: bold;
+}
+
+#btncss:hover,
+#btncss.activo {
+  background: var(--c2);
+  border: var(--c2);
+  color: var(--c5);
+  font-weight: bold;
+}
+
+
+/*CONTENIDO: ejercicios,*/
+
+a {
+  background-color: var(--c1);
+  color: var(--c5);
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 3px
+}
+
+.contenidoTab {
+  margin-bottom: 15px;
+  border: 2px solid black;
+  box-shadow: 5px 5px var(--c1);
+  padding: 10px;
+}
+
+#section-html .cardContent:hover {
+  box-shadow: 5px 5px var(--c4);
+}
+
+#section-css .cardContent:hover {
+  box-shadow: 5px 5px var(--c2);
+}
+
+#section-javascript .cardContent:hover {
+  box-shadow: 5px 5px var(--c3);
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.cardContent {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid var(--c1);
+  box-shadow: 5px 5px
+}
+
+
+
+
+
+
+
+/*mini proyectos & pie*/
+
+footer {
+  text-align: center;
+}
+
+.proyectoPersonal {
+  margin-top: 10vh;
+}
+
+.minipro {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  /* Recorta la imagen para que llene el cuadro sin deformarse */
+
+}
