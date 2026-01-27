@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap');
+
+* {
+    /*outline: 1px solid red;*/
+}
+
+html {
+    background: linear-gradient(170deg, rgba(161, 178, 250, 1) 0%, rgba(244, 195, 233, 1) 46%, rgba(254, 169, 204, 1) 100%);
+}
+
+
+
+:root {
+    --c1: #fea9d2;
+    --c2: #fef2ae;
+    --c3: #f4c3e9;
+    --c4: #2d1458;
+    --c5: #a1b2fa;
+}
+
+h1 {
+    display: inline-block;
+    padding: 10px 20px;
+
+    color: white;
+    font-family: murecho;
+    letter-spacing: 2px;
+    background: #ffffff40;
+    box-shadow: 0 4px 30px #0002;
+    -webkit-backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid #ffffff6b;
+    border-radius: 30px;
+
+}
+
+h3.meses {
+    text-align: center;
+    background: #a1b2fa80;
+    padding: 8px;
+    padding: 10;
+    margin: 0;
+    border-radius: 16px 16px 0 0;
+    color: var(--c2);
+    font-family: murecho;
+    letter-spacing: 2px;
+
+    box-shadow: 0 4px 30px #0002;
+    -webkit-backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(4.5px);
+    border: 1px solid #ffffff80;
+}
+
+div.calendario {
+
+    margin: 0 auto 0;
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    ;
+    border-radius: 30px;
+    gap: 10px;
+
+    /* ✅ ocupa todo el ancho */
+}
+
+ul.mes {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 15px;
+    margin: 0;
+    background: #f4c3e980;
+    border-radius: 0 0 16px 16px;
+    color: var(--c4);
+    /*  font-weight: bolder;*/
+
+    border: 0.25px solid #f4c3e9;
+    /*  margin: 0;*/
+    height: 260px;
+
+    box-shadow: 0 4px 30px #0002;
+    -webkit-backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(10.5px);
+    border: 1px solid #ffffff6b;
+}
+
+.mes li.finde {
+    color: white;
+}
+
+ul.mes li {
+    padding: 8px;
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-family: murecho, sans-serif;
+    font-weight: 500;
+    -webkit-backdrop-filter: blur(4.5px);
+    backdrop-filter: blur(10.5px);
+    font-weight: bolder;
+}
+
+footer {
+    margin: 5px;
+    text-align: center;
+    color: #fff;
+}
