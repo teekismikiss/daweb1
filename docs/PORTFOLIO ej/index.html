@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>PortfolioAa/cambiocolor</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!--***   CABECERA   ***-->
+
+<div class="avatar">
+  <span class="poncolor"><input onInput="cambiaColor()" type="color" id="picker"></span>
+  <img id="Avatar" src="" width=100px alt="">
+
+  <h1 id="name"></h1>
+
+  <p id="description"></p>
+  <span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mail">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10" />
+      <path d="M3 7l9 6l9 -6" />
+    </svg>
+    <p id="contacto"></p>
+  </span>
+
+  <ul id="redes" class="flex ">
+
+  </ul>
+</div>
+
+</header>
+
+<main>
+  <nav>
+
+    <button class="btnnav activo" id="btnhtml" onclick="cambiarTab('html')">HTML</button>
+    <button id="btncss" class="btnnav activo" onclick="cambiarTab('css')">CSS</button>
+
+    <button id="btnjs" class="btnnav activo" onclick="cambiarTab('javascript')">JS</button>
+  </nav>
+
+  <!--***  SECTION  HTML   ***-->
+
+  <section id="section-html" class="contenidoTab">
+
+    <ul id="html" class="grille">
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+    </ul>
+  </section>
+
+  <!--***   CSS   ***-->
+
+  <section id="section-css" class="contenidoTab" style="display:none">
+
+    <ul id="css" class="grille">
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+    </ul>
+  </section>
+
+  <!--***   JS   ***-->
+
+  <section id="section-javascript" class="contenidoTab" style="display:none">
+
+    <ul id="js" class="grille">
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+
+      <li class="cardContent">
+        <h2>Bucle dentro de bucle</h2>
+        <p class="descripcion">Arbol de Navidad.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi.</p>
+
+        <a href="https://codepen.io/luis/pen/html1">Ver ejercicio</a>
+      </li>
+    </ul>
+  </section>
+  <section class="faq">
+    <h3>¿Qué es IFCSD0210?</h3>
+    <p>El IFCD0210 es un certificado de profesionalidad que forma parte de la formación en desarrollo de aplicaciones con tecnologías web. Este certificado está diseñado para preparar a los estudiantes en la creación de sitios y aplicaciones web funcionales, combinando diseño de interfaces con programación básica del lado del cliente y del servidor. A lo largo del curso, se aprenden lenguajes como HTML, CSS, JavaScript, PHP y bases de datos relacionales, y se desarrollan habilidades para trabajar en entornos de desarrollo web.</p>
+  </section>
+</main>
+
+<footer> &copy Nadine</footer>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>

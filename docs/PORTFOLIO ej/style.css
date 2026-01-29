@@ -1,0 +1,247 @@
+::before,
+*::after{
+ box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header h1,
+header h2,
+header h3,
+header p,
+header ul,
+header li {
+  margin: 0;
+}
+
+/*para quitar el espacio enre a lineas margin:0 */
+
+:root {
+  --c1: black;
+  --c2: #49007e;
+  /*purple*/
+  --c3: #ffff00;
+  /*pink*/
+  --c4: #ff7d10;
+  /*orange*/
+  --c5: white;
+}
+
+header,
+main {
+  max-width: 900px;
+  margin: auto;
+}
+.poncolor{width:30px;height:30px;color: #999}
+.description{margin:0;padding:0;}
+main {
+  margin-bottom: 50px;
+}
+h1 {
+  font-size: 20px;
+  margin-top: 10vh;
+  padding: 0;
+  margin-top: 15px;
+}
+
+ul{list-style:none}
+
+
+.cardContent ul{list-style:initial;}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+  margin: 10;
+}
+/* header & nav*/
+.avatar {
+  display: grid;
+  place-items: center;
+}
+
+.flex {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar li {
+  display: block;
+}
+
+img#Avatar {
+  margin-top: 10vh;
+  border: 1.5px solid black;
+  box-shadow: 5px 3.9px;
+  border-radius: 2.75px;
+  margin-bottom: 0px;
+  width: 200px;
+}
+
+img#Avatar:hover{ box-shadow: 5px 8px;transform: translateY(-0.25em);transition:ease;}
+
+.avatar p {
+  font-size: 18px;
+}
+
+.btnnav {
+  border: none;
+  background: var(--c1);
+  color: var(--c5);
+  border-radius: 10px 10px 0px 0px;
+  margin-right: 0;
+  padding: 3px 20px;
+  transition: 0.3s;
+}
+
+#btnhtml:hover,
+#btnhtml.activo {
+  background: var(--c4);
+  border: var(--c4);
+  padding: 3px 50px;
+}
+
+#btnjs:hover,
+#btnjs.activo {
+  background: var(--c3);
+  border: var(--c3);
+  color: var(--c1);
+  font-weight: bold;
+  padding: 3px 50px;
+}
+
+#btncss:hover,
+#btncss.activo {
+  background: var(--c2);
+  border: var(--c2);
+  color: var(--c5);
+  font-weight: bold;
+  padding: 3px 50px;
+}
+
+/*CONTENIDO: ejercicios,*/
+
+a {
+  background-color: var(--c1);
+  color: var(--c5);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
+#redes a {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 0;
+  box-shadow: 2px 2px var(--c1);
+  display: flex;
+  list-style: none;
+  font-size: smaller;
+  
+  color: white;
+}
+
+#redes a:hover {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 0;
+  box-shadow: 2px 2px var(--c1);
+  display: flex;
+  list-style: none;
+  font-size: smaller;
+  background: white;
+  color: black;
+  transform: translateY(-0.25em);
+}
+
+#section-html li:hover {
+  color: var(--c4); transform: translateY(-0.25em); cursor:;
+}
+
+#section-css li:hover {
+  color: var(--c2); transform: translateY(-0.25em);
+}
+
+#section-javascript li:hover {
+  color: #e8c602; transform: translateY(-0.25em);
+}
+
+#section-html a:hover {
+  background: var(--c4);
+}
+
+#section-css a:hover {
+  background: var(--c2);
+}
+
+#section-javascript a:hover {
+  background: var(--c3);
+  color: var(--c1);
+}
+
+.contenidoTab
+{
+  margin-bottom: 15px;
+  border: 2px solid black;
+  box-shadow: 5px 5px var(--c1);
+  padding: 10px;
+}
+
+
+.faq
+{
+  margin-bottom: 15px;
+  border: 3px solid black;
+  ease;
+    text-align: center; position: relative;}
+.faq:hover{box-shadow: 5px 5px var(--c1);
+  padding: 10px;overflow: hidden;
+    transition: max-height 0.6s }
+
+
+#section-html .cardContent:hover {
+  box-shadow: 5px 5px var(--c4);
+}
+
+#section-css .cardContent:hover {
+  box-shadow: 5px 5px var(--c2);
+}
+
+#section-javascript .cardContent:hover {
+  box-shadow: 5px 5px var(--c3);
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.cardContent {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid var(--c1);
+  box-shadow: 5px 5px;
+}
+
+/*pie*/
+
+
+
+
+
+/* Estado ABIERTO (en hover) */
+
+footer {
+  text-align: center;
+  background: var(--c1);
+  color: var(--c5);
+  width: 100%; /* Asegura que ocupe el 100% */
+  padding: 20px 0;
+}
