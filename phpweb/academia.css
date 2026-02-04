@@ -1,0 +1,23 @@
+/* Layout principal */
+.contenedor {
+  display: flex;
+  width: 100%;
+}
+
+/* Sección izquierda */
+#sect-main {
+  width: 60%;
+}
+
+/* Sección derecha */
+#sect-perfil {
+  width: 40%;
+}
+
+/* Nav y footer */
+nav,
+footer {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
