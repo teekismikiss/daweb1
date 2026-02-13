@@ -1,0 +1,40 @@
+:root{
+    --c1:coral;  			/* main color		*	/
+    --ff:sans-serif;	/* main font			*/
+    --bdrs:20px;			/* border-radius	*/
+}
+
+html{
+    font-family: var(--ff);
+}
+
+body{
+    padding: 20px;
+    max-width:960px;
+    margin:0 auto;
+}
+
+ul{
+    list-style: none;
+    padding: 0;;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap:6px;
+    justify-content: space-between;
+}
+li{
+    flex: 1 1 0;
+    outline:1px coral solid;
+    border-radius: calc(var(--bdrs)/2);
+    padding: 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color:var(--c1);
+}
+
+
+
