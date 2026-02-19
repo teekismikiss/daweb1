@@ -17,6 +17,22 @@
         </nav>
     </header>
     <main>
+      
+  <?php
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['usuario'])) {
+            if ($_SESSION['usuario'] === 'admin') {
+                echo ' <a href="nuevoplato.php" class="btnSave">Agregar nuevo plato</a>';
+               
+            }
+        } else {
+            echo '<a href="crearUsuario.php"></a>';
+        }
+
+        ?>
         <?php
         if (session_status() === PHP_SESSION_NONE) {
             session_start();

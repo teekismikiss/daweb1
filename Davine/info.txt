@@ -1,4 +1,185 @@
+19-02-26
+Creación en clase de :login del admin(crearUsuario.php,login.json)
+***************
+ Concepto:
+ -> El admnin loguea desde el homepage (index.php).
+->  Le lleva a la pagina para meter sus datos (crearUsuario.php).
+-> Si login es exito aparece en la misma pagina (crearUsuario.php) mensaje de exito y boton para volver.
+-> Credenciales estan en login.json, (de momento no encriptado).
+-> en el homepage (index.php), con la possibilidad de log out (boton logout aparece únicamente cd el admin está logged in) y de agregar un nuevo plato (link to nuevoplato.php).
+-> Si login falla aparece en la misma pagina este mensaje "Error en las credenciales"  y un boton para volver en el homepage (view only).
 
+***************
+Logica para validar el admin
+
+Cargar los Datos: Obtenir y decodificar el login.json y convertirlo en un array asociativo de PHP.
+
+Validar  el log in: Comprobar que existan los campos usuario y contraseña en la petición. ¡Importante !Si faltan, tiene que detener la ejecución.
+
+Verificar los credenciales: comparar el contenido del JSON con los datos enviados por el usuario:
+
+Si coinciden -> iniciar una sesión  (session_start()) y asigna el rol 'admin' a la variable de $_session.
+
+Si no coinciden-> Mostrar un mensaje de error en la misma pantalla.
+
+¡ La función solo se ejecutará si detecta que el botón de envío (Login) ha sido pulsado!
+
+**
+formula
+
+if (!isset($_POST["usuario"]) || !isset($_POST["contrasena"])) {
+            return;
+        }
+
+        if ($datos["usuario"] == $_POST["usuario"] && $datos["contra"] == $_POST["contrasena"]) {
+            echo "Sesion iniciada correctamente <br>";
+            session_start();
+            $_SESSION['usuario'] = 'admin';
+        } else {
+            echo "Error en las credenciales";
+        }
+    
+
+    if (isset($_POST["Login"])) {
+        miFuncion();
+    }
+?>
+
+***************
+Logica para el acceso a las funciones del admin
+
+Gestionar la visualización de funciones restringidas.
+Verificar si hay una sesión activa.
+Visualización Condicional de Funciones
+
+**
+formula
+
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['usuario'])) {
+    if ($_SESSION['usuario'] === 'admin') {
+        echo ' <a href="nuevoplato.php" class="btnSave">Agregar nuevo plato</a>';
+    }
+}
+?>
+
+
+
+
+***************
+Nota
+
+·Pasamos a method="POST" en vez de <form method="GET"> (GET no se usa para contraseñas o información sensible.)
+
+** Falta:
+añadir el boton de agregar un nuevo plato
+
+
+
+*************
+INTENTO 
+
+Añadí el boton agregar plato pero cd se pulsa el boton se va a nuevoplato.php (PERO la pagina esta todo en blanco!!)
+el código que puse;
+<?php
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['usuario'])) {
+            if ($_SESSION['usuario'] === 'admin') {
+                echo ' <a href="nuevoplato.php" class="btnSave">Agregar nuevo plato</a>';
+               
+            }
+        } else {
+            echo '<a href="crearUsuario.php"></a>';
+        }
+
+        ?>
+
+según la ia es:
+El problema está en dos sitios combinados:
+
+En index.php (line 44)
+Estás haciendo session_destroy(); solo por mostrar el enlace “LogOut”.
+Eso destruye la sesión del admin en cuanto cargas index.php, aunque no hayas hecho clic en logout.
+
+En nuevoplato.php (line 7)
+La redirección está mal escrita: header("index.php");
+header() necesita el encabezado HTTP completo (Location: ...).
+Como luego haces exit(); en nuevoplato.php (line 9), el script termina y puede quedar en blanco.
+
+Por eso ves blanco al entrar a nuevoplato.php: llegas sin sesión + redirección mal formada + exit().
+
+Solución propuesta (sin aplicarla yo directamente):
+
+No destruyas sesión al pintar el botón. Haz logout en una acción separada (por ejemplo logout.php) o al detectar algo como ?logout=1.
+Cambia las redirecciones protegidas a formato correcto: header("Location: index.php"); y luego exit;.
+Revisa también platocreado.php (line 7), tiene el mismo patrón de header("index.php");.
+Si quieres, te indico exactamente qué líneas cambiar en cada archivo, paso a paso, sin tocar tu código.
+
+
+código propuesto por la ia:
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['usuario']) && $_SESSION['usuario'] === 'admin') {
+    echo '<a href="nuevoplato.php" class="btnSave">Agregar nuevo plato</a>';
+    echo '<a href="index.php?logout=1" class="btnSave">LogOut</a>';
+} else {
+    echo '<a href="crearUsuario.php">Login</a>';
+}
+
+// cerrar sesión SOLO si se hizo clic en logout
+if (isset($_GET['logout']) && $_GET['logout'] == '1') {
+    session_destroy();
+    header("Location: index.php");
+    exit();
+}
+?>
+nuevoplato.php (protección al inicio):
+
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
+    header("Location: index.php");
+    exit();
+}
+?>
+platocreado.php (misma corrección):
+
+<?php
+session_start();
+
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
+    header("Location: index.php");
+    exit();
+}
+?>
+
+***Clave del error:
+
+Estabas destruyendo la sesión en index.php sin hacer clic real en logout.
+Estabas redirigiendo mal con header("index.php") en lugar de header("Location: index.php").
+
+
+
+
+
+
+
+
+
+
+
+18-02-26
 Añadí € a echo a la linea 43 de index.php para no tener que poner todo el tiempo.
 Tambien puse number a input del precio ya que no debería texto a dentro, pero  no sé como hacer para que solo se pueda añadir numero y no texto.
-añadi class="form" en el formulario en nuevoplato.php tb la clase btnSave al boton del nuevoplato y al a href de plato creado.
+Añadí class="form" en el formulario en nuevoplato.php tb la clase btnSave al boton del nuevoplato y al a href de plato creado.
