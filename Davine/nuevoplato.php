@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Si la sesión usuario no existe o no es igual a Bilbo
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
+    // Redirigir a index
+    header("index.php");
+    // Detener el script por completo
+    exit(); 
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -42,7 +54,7 @@
             <input required type="text" placeholder="insertar alergenos" name="alergenos" class="form">
             <br>
             <label class="form">Precio</label>
-            <input required type="number" placeholder="insertar precio" name="precio" class="form">
+            <input required type="number" min="0" placeholder="insertar precio" name="precio" class="form">
             <br>
             <label class="form">Url de la Foto</label>
             <input type="text" placeholder="insertar foto" name="foto" class="form">

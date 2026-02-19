@@ -26,6 +26,15 @@
             "alergeno": "gluten free",
             "precio": "10",
             "foto": ""
+        },
+        {
+            "id": 10,
+            "activo": true,
+            "nombre": "gmnñ",
+            "ingredientes": "ngsf",
+            "alergeno": "nsgfs",
+            "precio": "2",
+            "foto": ""
         }
     ],
     "Segundo": [

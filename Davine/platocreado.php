@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+// Si la sesión usuario no existe o no es igual a Bilbo
+if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
+    // Redirigir a index
+    header("index.php");
+    // Detener el script por completo
+    exit(); 
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
