@@ -1,10 +1,11 @@
 <?php
+
 session_start();
 
 // Si la sesión usuario no existe o no es igual a Bilbo
 if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
     // Redirigir a index
-    header("index.php");
+    header("Location: index.php");
     // Detener el script por completo
     exit(); 
 }
@@ -14,21 +15,7 @@ if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante</title>
-    <meta name="description">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body id="inicio">
-    <header>
-
-        <nav>
-
-        </nav>
-    </header>
+<?php include 'beforemain.php';?>
     <main>
         <h1>Sidreria Davine 🍾</h1>
 

@@ -1,3 +1,8 @@
+<?php
+
+
+// Inicia la sesión
+session_start(); ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -38,7 +43,7 @@
         function miFuncion()
         {
             //01 carga del JSON
-            $json = file_get_contents('login.json');
+            $json = file_get_contents(__DIR__ . '/login.json');
 
             //02 convertir JSON a array PHP (asociativo)
             $datos = json_decode($json, true);
@@ -49,8 +54,6 @@
             }
             if ($datos["usuario"] == $_POST["usuario"] && $datos["contra"] == $_POST["contrasena"]) {
                 echo "Sesion iniciada correctamente <br>";
-                // Inicia la sesión
-                session_start();
                 $_SESSION['usuario'] = 'admin';
             } else {
                 echo "Error en las credenciales";

@@ -1,56 +1,28 @@
+<?php
+
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+if (isset($_SESSION['usuario'])) {
+    if ($_SESSION['usuario'] === 'admin') {
+        echo ' <a href="logout.php" class="btnSave">LogOut</a>';
+        
+    }
+} else {
+    echo '<a href="crearUsuario.php"class="btnSave">Login</a>';
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante</title>
-    <meta name="description">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body id="inicio">
-    <header>
-
-        <nav>
-
-        </nav>
-    </header>
+<?php include 'beforemain.php';?>
     <main>
-      
-  <?php
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
 
-        if (isset($_SESSION['usuario'])) {
-            if ($_SESSION['usuario'] === 'admin') {
-                echo ' <a href="nuevoplato.php" class="btnSave">Agregar nuevo plato</a>';
-               
-            }
-        } else {
-            echo '<a href="crearUsuario.php"></a>';
-        }
-
-        ?>
-        <?php
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
-
-        if (isset($_SESSION['usuario'])) {
-            if ($_SESSION['usuario'] === 'admin') {
-                echo ' <a href="index.php" class="btnSave">LogOut</a>';
-                session_destroy();
-            }
-        } else {
-            echo '<a href="crearUsuario.php">Login</a>';
-        }
-
-        ?>
 
         <h1>Sidreria Davine 🍾</h1>
-
 
         <?php
         //cargamos el archivo JSON
@@ -86,9 +58,7 @@
         }
         ?>
         <?php
-        if (session_status() === PHP_SESSION_NONE) {
-            session_start();
-        }
+       
 
         if (isset($_SESSION['usuario'])) {
             if ($_SESSION['usuario'] === 'admin') {
