@@ -15,8 +15,7 @@ if (isset($_SESSION['usuario'])) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="es">
+
 
 <?php include 'beforemain.php';?>
     <main>
