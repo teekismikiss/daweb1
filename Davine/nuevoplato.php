@@ -66,15 +66,4 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario'] == 'admin') {
             <input type="submit" value="Guardar Plato" class="btnSave" class="form">
         </form>
 
-    </main>
-
-    <footer>
-        <nav>
-            &copy 2026 Sidreria Davine 🍾
-        </nav>
-
-    </footer>
-    <script src="Script.js"> </script>
-</body>
-
-</html>
+   <?php include 'aftermain.php';?>

@@ -69,13 +69,4 @@ if (!isset($_SESSION['usuario']) || $_SESSION['usuario'] !== 'admin') {
         <a href="index.php" class="btnSave"> Volver</a>
     </main>
 
-    <footer>
-        <nav>
-            &copy 2026 Sidreria Davine 🍾
-        </nav>
-
-    </footer>
-    <script src="Script.js"> </script>
-</body>
-
-</html>
+   <?php include 'aftermain.php';?>
