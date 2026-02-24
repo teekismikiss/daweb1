@@ -66,18 +66,7 @@ if (isset($_SESSION['usuario'])) {
         }
 
         ?>
+<?php include 'aftermain.php';?>
 
 
-
-    </main>
-
-    <footer>
-        <nav>
-            &copy 2026 Sidreria Davine 🍾
-        </nav>
-
-    </footer>
-    <script src="Script.js"> </script>
-</body>
-
-</html>
+    
