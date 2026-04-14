@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PWA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FF69B4">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="display">
+            <div class="history" id="history"></div>
+            <div class="current" id="current">0</div>
+        </div>
+        <div class="buttons">
+            <!-- Basic Buttons (Visible always) -->
+            <button class="btn secondary" onclick="clearDisplay()">AC</button>
+            <button class="btn secondary" onclick="deleteLast()">DEL</button>
+            <button class="btn secondary" onclick="appendOperator('/')">÷</button>
+            <button class="btn secondary" onclick="appendOperator('*')">×</button>
+
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn secondary" onclick="appendOperator('-')">-</button>
+
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn secondary" onclick="appendOperator('+')">+</button>
+
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn primary" id="equals-btn" onclick="calculate()">=</button>
+
+            <button class="btn zero" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendNumber('.')">.</button>
+            
+            <!-- Scientific Buttons (Visible only in Landscape) -->
+            <div class="scientific-buttons">
+                <button class="btn sci" onclick="appendFunc('sin')">sin</button>
+                <button class="btn sci" onclick="appendFunc('cos')">cos</button>
+                <button class="btn sci" onclick="appendFunc('tan')">tan</button>
+                <button class="btn sci" onclick="appendFunc('log')">log</button>
+                <button class="btn sci" onclick="appendFunc('ln')">ln</button>
+                <button class="btn sci" onclick="appendFunc('sqrt')">√</button>
+                <button class="btn sci" onclick="appendOperator('**')">xʸ</button>
+                <button class="btn sci" onclick="appendConstant('pi')">π</button>
+                <button class="btn sci" onclick="appendConstant('e')">e</button>
+                <button class="btn sci" onclick="appendNumber('(')">(</button>
+                <button class="btn sci" onclick="appendNumber(')')">)</button>
+                <button class="btn sci" onclick="appendFunc('exp')">exp</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
