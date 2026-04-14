@@ -1,4 +1,12 @@
-# Calculadora PWA Pro
+
+
+
+# Calculadora PWA Pro hecho por Antigravity
+```txt
+haz una calculadora color rosa y azul para movil, en pwa (manifest.json,sw.ja etc...), que en posicion horizontal se convierte en calculadora cientifica en modo oscuro
+```
+
+
 
 Esta aplicacion es una calculadora avanzada diseñada como una Progressive Web App (PWA). Permite realizar calculos basicos en una interfaz estetica de colores rosa y azul cuando se encuentra en posicion vertical, y se transforma en una potente herramienta cientifica con modo oscuro cuando el dispositivo se gira a posicion horizontal.
 
